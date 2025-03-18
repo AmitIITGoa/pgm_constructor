@@ -151,7 +151,7 @@ if st.button("Compute"):
                     st.subheader("Generated Codewords from All Possible Messages")
                     for msg_int in range(2**k):
                         msg = [(msg_int >> i) & 1 for i in range(k)]
-                        msg = np.array(msg[::-1])
+                        msg = list(msg[::-1])
                         codeword = generated_codewords[tuple(msg)]
                         st.write(f"Message = {tuple(msg)}  -->  Codeword = {codeword}")
             
