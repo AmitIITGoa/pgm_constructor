@@ -94,12 +94,12 @@ def get_generator_matrix(vectors):
 st.title("Linear Extension & Generator Matrix Tool")
 
 # Input controls for number of vectors and vector size
-n = st.number_input("Enter how many vectors to input:", min_value=1, step=1, value=5)
-m = st.number_input("Enter the size of each vector:", min_value=1, step=1, value=3)
+n = st.number_input("Enter how many vectors to input:", min_value=1, step=1, value=3)
+m = st.number_input("Enter the size of each vector:", min_value=1, step=1, value=4)
 
 st.markdown("### Input Vectors")
 st.markdown("Enter one vector per line. Separate elements with spaces.")
-vectors_input = st.text_area("Vectors:", value="0 0 0\n0 0 0\n0 0 0\n0 0 0\n0 0 0")
+vectors_input = st.text_area("Vectors:", value="1 0 0 0\n0 1 0 0\n0 0 1 0\n")
 
 if st.button("Compute"):
     try:
